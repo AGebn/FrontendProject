@@ -19,26 +19,37 @@
     </div>
     <div id="satsPerUsd" class="container"></div>
     <div id="satsCanBuy" class="container">
-      <p>
+      <h2>What can you buy with 1 BTC? (100,000,000 sats)</h2>
+      <p id="avgcar">
         AVG US Car
         <img class="item" src="/images/basicCar.jpg" />
       </p>
-      <p>
+      <p id="lambo">
         LAMBO
         <img
           class="item"
           src="/images/Lamborghini_Aventador_LP700-4_Orange.jpg"
         />
       </p>
-      <p>
+      <p id="avghouse">
         AVG US House
         <img class="item" src="/images/avgHouse.jpg" />
       </p>
-      <p>
+      <p id="citadel">
         Citadel
         <img class="item" src="/images/citadel.jpg" />
       </p>
     </div>
-    <div id="costBasisCalc"></div>
+    <div id="costBasisCalc">
+      <form id="cbForm">
+        User Name: <input type="text" name="userName" /><br />
+        Dollars Spent: <input type="number" name="dollars" /><br />
+        # of Satoshis purchased: <input type="number" name="sats" /><br /><br />
+
+        <input id="cbButton" type="button" value="Submit" />
+
+        <p id="costBasis">Your cost basis will show up here</p>
+      </form>
+    </div>
   </body>
 </html>
