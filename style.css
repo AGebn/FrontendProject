@@ -1,0 +1,20 @@
+body {
+  background-color: gray;
+}
+
+h1 {
+  background-color: rgb(77, 74, 74);
+  color: orange;
+  text-align: center;
+}
+
+.item {
+  border: solid 2px black;
+  width: 250px;
+}
+
+#satsPerUsd {
+  background-color: black;
+  color: gold;
+  text-align: center;
+}
