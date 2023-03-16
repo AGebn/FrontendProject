@@ -64,7 +64,7 @@ let clickCit = 0;
 avgCarEl.onclick = function () {
   if (clickCar === 0) {
     avgCarEl.innerText += `You can buy ${
-      (btcData.price / basicCar) * 100
+      (btcData.price / basicCar).toPrecision(2) * 100
     } % of a basic car.`;
     clickCar += 1;
   }
@@ -73,7 +73,7 @@ avgCarEl.onclick = function () {
 lamboEl.onclick = function () {
   if (clickLam === 0) {
     lamboEl.innerText += `You can buy ${
-      (btcData.price / lambo) * 100
+      (btcData.price / lambo).toPrecision(2) * 100
     } % of a sick moon lambo.`;
     clickLam += 1;
   }
@@ -82,7 +82,7 @@ lamboEl.onclick = function () {
 avgHouseEl.onclick = function () {
   if (clickHouse === 0) {
     avgHouseEl.innerText += `You can buy ${
-      (btcData.price / avgHouse) * 100
+      (btcData.price / avgHouse).toPrecision(3) * 100
     } % of an average American house.`;
     clickHouse += 1;
   }
@@ -91,7 +91,7 @@ avgHouseEl.onclick = function () {
 citadelEl.onclick = function () {
   if (clickCit === 0) {
     citadelEl.innerText += `You can buy ${
-      (btcData.price / citadel) * 100
+      (btcData.price / citadel).toPrecision(2) * 100
     } % of your very own citadel.`;
     clickCit += 1;
   }
