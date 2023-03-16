@@ -123,5 +123,7 @@ cbButtonEl.onclick = function () {
   console.log(users);
   cbScore.innerText = `${cbForm.userName.value}'s cost basis is ${
     users[cbForm.userName.value].costBasis
-  } sats/usd`;
+  } sats/usd OR ${
+    (1 / users[cbForm.userName.value].costBasis) * 100000000
+  } USD/BTC`;
 };
