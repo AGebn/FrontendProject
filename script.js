@@ -56,28 +56,45 @@ let avgHouseEl = document.getElementById("avghouse");
 let citadelEl = document.getElementById("citadel");
 
 //now creating the percentages and placing them in the correct EL when clicked
+let clickCar = 0;
+let clickLam = 0;
+let clickHouse = 0;
+let clickCit = 0;
+
 avgCarEl.onclick = function () {
-  avgCarEl.innerText += `You can buy ${
-    (btcData.price / basicCar) * 100
-  } % of a basic car.`;
+  if (clickCar === 0) {
+    avgCarEl.innerText += `You can buy ${
+      (btcData.price / basicCar) * 100
+    } % of a basic car.`;
+    clickCar += 1;
+  }
 };
 
 lamboEl.onclick = function () {
-  lamboEl.innerText += `You can buy ${
-    (btcData.price / lambo) * 100
-  } % of a sick moon lambo.`;
+  if (clickLam === 0) {
+    lamboEl.innerText += `You can buy ${
+      (btcData.price / lambo) * 100
+    } % of a sick moon lambo.`;
+    clickLam += 1;
+  }
 };
 
 avgHouseEl.onclick = function () {
-  avgHouseEl.innerText += `You can buy ${
-    (btcData.price / avgHouse) * 100
-  } % of an average American house.`;
+  if (clickHouse === 0) {
+    avgHouseEl.innerText += `You can buy ${
+      (btcData.price / avgHouse) * 100
+    } % of an average American house.`;
+    clickHouse += 1;
+  }
 };
 
 citadelEl.onclick = function () {
-  citadelEl.innerText += `You can buy ${
-    (btcData.price / citadel) * 100
-  } % of your very own citadel.`;
+  if (clickCit === 0) {
+    citadelEl.innerText += `You can buy ${
+      (btcData.price / citadel) * 100
+    } % of your very own citadel.`;
+    clickCit += 1;
+  }
 };
 
 //receiving data, calculating cost basis, and displaying the number back out to the user.
@@ -95,10 +112,10 @@ cbButtonEl.onclick = function () {
     // console.log(users);
   } else {
     users[cbForm.userName.value].dollars =
-      users[cbForm.userName.value].dollars + cbForm.dollars.value;
+      users[cbForm.userName.value].dollars * 1 + cbForm.dollars.value * 1;
 
     users[cbForm.userName.value].sats =
-      users[cbForm.userName.value].sats + cbForm.sats.value;
+      users[cbForm.userName.value].sats * 1 + cbForm.sats.value * 1;
 
     users[cbForm.userName.value].costBasis =
       users[cbForm.userName.value].sats / users[cbForm.userName.value].dollars;

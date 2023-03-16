@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Wealth in Sats</title>
   </head>
+
   <body>
     <div id="header">
       <h1>REAL TIME EXPLANATION OF YOUR WEALTH IN SATOSHIS</h1>
@@ -20,30 +21,28 @@
     <div id="satsPerUsd" class="container"></div>
     <div id="satsCanBuy" class="container">
       <h2>What can you buy with 1 BTC? (100,000,000 sats)</h2>
-      <p id="avgcar">
-        AVG US Car
-        <img class="item" src="/images/basicCar.jpg" />
+      <p id="avgcar" class="item">
+        <!-- <img class="item" src="/images/basicCar.jpg" /> -->
       </p>
-      <p id="lambo">
-        LAMBO
-        <img
+      <p id="lambo" class="item">
+        <!-- <img
           class="item"
           src="/images/Lamborghini_Aventador_LP700-4_Orange.jpg"
-        />
+        /> -->
       </p>
-      <p id="avghouse">
-        AVG US House
-        <img class="item" src="/images/avgHouse.jpg" />
+      <p id="avghouse" class="item">
+        <!-- <img class="item" src="/images/avgHouse.jpg" /> -->
       </p>
-      <p id="citadel">
-        Citadel
-        <img class="item" src="/images/citadel.jpg" />
+      <p id="citadel" class="item">
+        <!-- <img class="item" src="/images/citadel.jpg" /> -->
       </p>
     </div>
+    <br />
     <div id="costBasisCalc">
+      Cost Basis Calculator
       <form id="cbForm">
-        User Name: <input type="text" name="userName" /><br />
-        Dollars Spent: <input type="number" name="dollars" /><br />
+        User Name: <input type="text" name="userName" /><br /><br />
+        Dollars Spent: <input type="number" name="dollars" /><br /><br />
         # of Satoshis purchased: <input type="number" name="sats" /><br /><br />
 
         <input id="cbButton" type="button" value="Submit" />
